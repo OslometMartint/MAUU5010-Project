@@ -22,7 +22,7 @@ const Menu = ({id, open, closeMenu}) => {
            }
         `}</style>
         <ul>
-            <li><Link href="/">Test</Link></li>
+            <li><Link href="/"><a>Test</a></Link></li>
             <li>Test</li>
             <li>Test</li>
         </ul>
