@@ -1,6 +1,14 @@
-const Menu = ({open, closeMenu}) => {
+import Link from "next/link";
+
+const Menu = ({id, open, closeMenu}) => {
+    const handleKeyUp = (e) => {
+        console.log(e);
+        if(e.key === 'Escape') {
+            closeMenu();
+        }
+    }
     return (
-    <nav>
+    <nav id={id} onKeyUp={handleKeyUp}>
         <style jsx>{`
            nav {
                height: 100vh;
@@ -12,11 +20,9 @@ const Menu = ({open, closeMenu}) => {
                color: #fafafa;
                transition: all 0.25s ease-in; 
            }
-           button {color: #fafafa;}
         `}</style>
-        <button onClick={closeMenu}>X</button>
         <ul>
-            <li>Test</li>
+            <li><Link href="/">Test</Link></li>
             <li>Test</li>
             <li>Test</li>
         </ul>
