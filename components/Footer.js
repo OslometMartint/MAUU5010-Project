@@ -1,5 +1,8 @@
 import Link from 'next/link';
-const Footer = () => {
+import {withRouter} from 'next/router';
+
+const Footer = ({router}) => {
+    console.log(router.pathname);
   return (
     <footer>
       <style jsx>{`
@@ -12,16 +15,25 @@ const Footer = () => {
           position: absolute;
           bottom: 0;
         }
-        button {
+        nav {
+            display: flex;
+            flex: 1;
+            height: 100%;
+            align-items: center;
+        }
+        a {
           color: #fafafa;
           display: flex;
           flex-direction: column;
+          flex: 1;
           align-items: center;
           border: 0;
           background: transparent;
-          margin-left: 0.8em;
+          text-decoration: none;
+          height: 100%;
+          justify-content: center;
         }
-        button:focus {
+        a:focus, a.active {
           background: #fafafa;
           color: #360000;
           outline: 0;
@@ -29,13 +41,13 @@ const Footer = () => {
       `}</style>
       <nav>
         <Link href="/">
-          <a>
-            <i className="material-icons">menu</i>
-            Menu
+          <a className={router.pathname === '/' ? 'active' : ''}>
+            <i className="material-icons">directions_railway</i>
+            Avganger
           </a>
         </Link>
         <Link href="/tickets">
-          <a>
+          <a className={router.pathname === '/tickets' ? 'active' : ''}>
             <i className="material-icons">local_play</i>
             Tickets
           </a>
@@ -45,4 +57,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);
