@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function StationSearchBar({setValue, value, valid}) {
+function StationSearchBar({ setValue, value, valid }) {
     const [searchInput, setSearchInput] = useState("");
     const [suggestions, setSuggestions] = useState([]);
 
@@ -8,7 +8,7 @@ function StationSearchBar({setValue, value, valid}) {
         setSearchInput(e.target.value);
         valid(e.target.value.toLowerCase() === value.toLowerCase());
         console.log(e.nativeEvent.type);
-        if(e.nativeEvent.type === 'input') {
+        if (e.nativeEvent.type === 'input') {
             getSuggestions();
         }
     };
@@ -28,7 +28,7 @@ function StationSearchBar({setValue, value, valid}) {
 
     const handleOnBlur = () => {
         setTimeout(() => {
-            if(suggestions.findIndex(a => a.toLowerCase() === searchInput.toLowerCase()) > -1){
+            if (suggestions.findIndex(a => a.toLowerCase() === searchInput.toLowerCase()) > -1) {
                 valid(true);
                 setValue(searchInput);
                 setSuggestions([])
@@ -58,19 +58,19 @@ function StationSearchBar({setValue, value, valid}) {
         <div>
             <input value={searchInput} onChange={handleOnChange} onBlur={handleOnBlur} onKeyPress={handleOnKeyPress} type="text" />
             <ul>
-                {Array.isArray(suggestions) && 
-                suggestions.map((suggestion, i) => {
-                    return (<li key={i} onClick={handleSuggestionOnClick}>{suggestion}</li>)
-                })}
+                {Array.isArray(suggestions) &&
+                    suggestions.map((suggestion, i) => {
+                        return (<li key={i} onClick={handleSuggestionOnClick}>{suggestion}</li>)
+                    })}
             </ul>
-        
-        <style jsx>{`
+
+            <style jsx>{`
             ul {
                 padding-left: 0;
                 cursor:pointer;
             }​
         `}</style>
-    </div>
+        </div>
     );
 }
 
