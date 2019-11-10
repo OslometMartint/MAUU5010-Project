@@ -1,1 +1,852 @@
-{"activeTickets":[{"startTime":"2019-11-10T19:42:00+0100","endTime":"2019-11-10T20:20:30+0100","duration":2310,"waitingTime":0,"walkDistance":0,"legs":[{"mode":"rail","aimedStartTime":"2019-11-10T19:42:00+0100","aimedEndTime":"2019-11-10T20:20:00+0100","expectedStartTime":"2019-11-10T19:42:00+0100","expectedEndTime":"2019-11-10T20:20:30+0100","realtime":true,"distance":26022.47433556979,"duration":2310,"ride":true,"fromPlace":{"name":"Oslo S","latitude":59.910049,"longitude":10.754663,"quay":{"id":"NSR:Quay:562","publicCode":"16","name":"Oslo S","situations":[]}},"toPlace":{"name":"Hakadal stasjon","latitude":60.117411,"longitude":10.829261,"quay":{"id":"NSR:Quay:96","publicCode":"1","name":"Hakadal stasjon","situations":[]}},"serviceJourney":{"id":"GJB:ServiceJourney:1-64-253","privateCode":"253","linePublicCode":"L3","wheelchairAccessible":"noInformation","journeyPattern":{"id":"GJB:JourneyPattern:1-29","name":"L3 to Jaren stasjon (RB:NSR:Quay:548) from Oslo S (RB:NSR:Quay:562) like trip RB_GJB:ServiceJourney:1-50-239","line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"notices":[]},"notices":[],"situations":[]},"line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"intermediateQuays":[{"id":"NSR:Quay:573","name":"Tøyen stasjon","publicCode":"1"},{"id":"NSR:Quay:577","name":"Grefsen stasjon","publicCode":"1"},{"id":"NSR:Quay:494","name":"Nydalen stasjon","publicCode":"1"},{"id":"NSR:Quay:873","name":"Kjelsås stasjon","publicCode":"1"},{"id":"NSR:Quay:1099","name":"Snippen stasjon","publicCode":"1"},{"id":"NSR:Quay:353","name":"Movatn stasjon","publicCode":"1"},{"id":"NSR:Quay:440","name":"Nittedal stasjon","publicCode":"1"},{"id":"NSR:Quay:822","name":"Åneby stasjon","publicCode":"1"},{"id":"NSR:Quay:632","name":"Varingskollen stasjon","publicCode":"1"}],"intermediateEstimatedCalls":[{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:573","name":"Tøyen stasjon","stopPlace":{"id":"NSR:StopPlace:339"}},"expectedArrivalTime":"2019-11-10T19:46:30+0100","expectedDepartureTime":"2019-11-10T19:47:00+0100","aimedArrivalTime":"2019-11-10T19:46:00+0100","aimedDepartureTime":"2019-11-10T19:47:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:577","name":"Grefsen stasjon","stopPlace":{"id":"NSR:StopPlace:343"}},"expectedArrivalTime":"2019-11-10T19:49:30+0100","expectedDepartureTime":"2019-11-10T19:50:00+0100","aimedArrivalTime":"2019-11-10T19:49:00+0100","aimedDepartureTime":"2019-11-10T19:50:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:494","name":"Nydalen stasjon","stopPlace":{"id":"NSR:StopPlace:301"}},"expectedArrivalTime":"2019-11-10T19:51:30+0100","expectedDepartureTime":"2019-11-10T19:52:00+0100","aimedArrivalTime":"2019-11-10T19:51:00+0100","aimedDepartureTime":"2019-11-10T19:52:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:873","name":"Kjelsås stasjon","stopPlace":{"id":"NSR:StopPlace:530"}},"expectedArrivalTime":"2019-11-10T19:54:30+0100","expectedDepartureTime":"2019-11-10T19:55:00+0100","aimedArrivalTime":"2019-11-10T19:54:00+0100","aimedDepartureTime":"2019-11-10T19:55:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:1099","name":"Snippen stasjon","stopPlace":{"id":"NSR:StopPlace:666"}},"expectedArrivalTime":"2019-11-10T20:00:30+0100","expectedDepartureTime":"2019-11-10T20:01:00+0100","aimedArrivalTime":"2019-11-10T20:00:00+0100","aimedDepartureTime":"2019-11-10T20:01:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:353","name":"Movatn stasjon","stopPlace":{"id":"NSR:StopPlace:218"}},"expectedArrivalTime":"2019-11-10T20:03:30+0100","expectedDepartureTime":"2019-11-10T20:04:00+0100","aimedArrivalTime":"2019-11-10T20:03:00+0100","aimedDepartureTime":"2019-11-10T20:04:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:440","name":"Nittedal stasjon","stopPlace":{"id":"NSR:StopPlace:267"}},"expectedArrivalTime":"2019-11-10T20:09:30+0100","expectedDepartureTime":"2019-11-10T20:10:00+0100","aimedArrivalTime":"2019-11-10T20:09:00+0100","aimedDepartureTime":"2019-11-10T20:10:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:822","name":"Åneby stasjon","stopPlace":{"id":"NSR:StopPlace:502"}},"expectedArrivalTime":"2019-11-10T20:14:30+0100","expectedDepartureTime":"2019-11-10T20:15:00+0100","aimedArrivalTime":"2019-11-10T20:14:00+0100","aimedDepartureTime":"2019-11-10T20:15:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:632","name":"Varingskollen stasjon","stopPlace":{"id":"NSR:StopPlace:379"}},"expectedArrivalTime":"2019-11-10T20:16:40+0100","expectedDepartureTime":"2019-11-10T20:17:00+0100","aimedArrivalTime":"2019-11-10T20:16:00+0100","aimedDepartureTime":"2019-11-10T20:17:00+0100"}],"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"operator":{"id":"GJB:Operator:502","name":"Vy"}}]},{"startTime":"2019-11-10T19:42:00+0100","endTime":"2019-11-10T20:20:30+0100","duration":2310,"waitingTime":0,"walkDistance":0,"legs":[{"mode":"rail","aimedStartTime":"2019-11-10T19:42:00+0100","aimedEndTime":"2019-11-10T20:20:00+0100","expectedStartTime":"2019-11-10T19:42:00+0100","expectedEndTime":"2019-11-10T20:20:30+0100","realtime":true,"distance":26022.47433556979,"duration":2310,"ride":true,"fromPlace":{"name":"Oslo S","latitude":59.910049,"longitude":10.754663,"quay":{"id":"NSR:Quay:562","publicCode":"16","name":"Oslo S","situations":[]}},"toPlace":{"name":"Hakadal stasjon","latitude":60.117411,"longitude":10.829261,"quay":{"id":"NSR:Quay:96","publicCode":"1","name":"Hakadal stasjon","situations":[]}},"serviceJourney":{"id":"GJB:ServiceJourney:1-64-253","privateCode":"253","linePublicCode":"L3","wheelchairAccessible":"noInformation","journeyPattern":{"id":"GJB:JourneyPattern:1-29","name":"L3 to Jaren stasjon (RB:NSR:Quay:548) from Oslo S (RB:NSR:Quay:562) like trip RB_GJB:ServiceJourney:1-50-239","line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"notices":[]},"notices":[],"situations":[]},"line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"intermediateQuays":[{"id":"NSR:Quay:573","name":"Tøyen stasjon","publicCode":"1"},{"id":"NSR:Quay:577","name":"Grefsen stasjon","publicCode":"1"},{"id":"NSR:Quay:494","name":"Nydalen stasjon","publicCode":"1"},{"id":"NSR:Quay:873","name":"Kjelsås stasjon","publicCode":"1"},{"id":"NSR:Quay:1099","name":"Snippen stasjon","publicCode":"1"},{"id":"NSR:Quay:353","name":"Movatn stasjon","publicCode":"1"},{"id":"NSR:Quay:440","name":"Nittedal stasjon","publicCode":"1"},{"id":"NSR:Quay:822","name":"Åneby stasjon","publicCode":"1"},{"id":"NSR:Quay:632","name":"Varingskollen stasjon","publicCode":"1"}],"intermediateEstimatedCalls":[{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:573","name":"Tøyen stasjon","stopPlace":{"id":"NSR:StopPlace:339"}},"expectedArrivalTime":"2019-11-10T19:46:30+0100","expectedDepartureTime":"2019-11-10T19:47:00+0100","aimedArrivalTime":"2019-11-10T19:46:00+0100","aimedDepartureTime":"2019-11-10T19:47:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:577","name":"Grefsen stasjon","stopPlace":{"id":"NSR:StopPlace:343"}},"expectedArrivalTime":"2019-11-10T19:49:30+0100","expectedDepartureTime":"2019-11-10T19:50:00+0100","aimedArrivalTime":"2019-11-10T19:49:00+0100","aimedDepartureTime":"2019-11-10T19:50:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:494","name":"Nydalen stasjon","stopPlace":{"id":"NSR:StopPlace:301"}},"expectedArrivalTime":"2019-11-10T19:51:30+0100","expectedDepartureTime":"2019-11-10T19:52:00+0100","aimedArrivalTime":"2019-11-10T19:51:00+0100","aimedDepartureTime":"2019-11-10T19:52:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:873","name":"Kjelsås stasjon","stopPlace":{"id":"NSR:StopPlace:530"}},"expectedArrivalTime":"2019-11-10T19:54:30+0100","expectedDepartureTime":"2019-11-10T19:55:00+0100","aimedArrivalTime":"2019-11-10T19:54:00+0100","aimedDepartureTime":"2019-11-10T19:55:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:1099","name":"Snippen stasjon","stopPlace":{"id":"NSR:StopPlace:666"}},"expectedArrivalTime":"2019-11-10T20:00:30+0100","expectedDepartureTime":"2019-11-10T20:01:00+0100","aimedArrivalTime":"2019-11-10T20:00:00+0100","aimedDepartureTime":"2019-11-10T20:01:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:353","name":"Movatn stasjon","stopPlace":{"id":"NSR:StopPlace:218"}},"expectedArrivalTime":"2019-11-10T20:03:30+0100","expectedDepartureTime":"2019-11-10T20:04:00+0100","aimedArrivalTime":"2019-11-10T20:03:00+0100","aimedDepartureTime":"2019-11-10T20:04:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:440","name":"Nittedal stasjon","stopPlace":{"id":"NSR:StopPlace:267"}},"expectedArrivalTime":"2019-11-10T20:09:30+0100","expectedDepartureTime":"2019-11-10T20:10:00+0100","aimedArrivalTime":"2019-11-10T20:09:00+0100","aimedDepartureTime":"2019-11-10T20:10:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:822","name":"Åneby stasjon","stopPlace":{"id":"NSR:StopPlace:502"}},"expectedArrivalTime":"2019-11-10T20:14:30+0100","expectedDepartureTime":"2019-11-10T20:15:00+0100","aimedArrivalTime":"2019-11-10T20:14:00+0100","aimedDepartureTime":"2019-11-10T20:15:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:632","name":"Varingskollen stasjon","stopPlace":{"id":"NSR:StopPlace:379"}},"expectedArrivalTime":"2019-11-10T20:16:40+0100","expectedDepartureTime":"2019-11-10T20:17:00+0100","aimedArrivalTime":"2019-11-10T20:16:00+0100","aimedDepartureTime":"2019-11-10T20:17:00+0100"}],"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"operator":{"id":"GJB:Operator:502","name":"Vy"}}]},{"startTime":"2019-11-10T19:02:00+0100","endTime":"2019-11-10T20:05:30+0100","duration":3810,"waitingTime":330,"walkDistance":0,"legs":[{"mode":"rail","aimedStartTime":"2019-11-10T19:02:00+0100","aimedEndTime":"2019-11-10T19:46:00+0100","expectedStartTime":"2019-11-10T19:02:00+0100","expectedEndTime":"2019-11-10T19:46:30+0100","realtime":true,"distance":36172.674800074434,"duration":2670,"ride":true,"fromPlace":{"name":"Oslo S","latitude":59.910049,"longitude":10.754663,"quay":{"id":"NSR:Quay:562","publicCode":"16","name":"Oslo S","situations":[]}},"toPlace":{"name":"Harestua stasjon","latitude":60.206235,"longitude":10.722584,"quay":{"id":"NSR:Quay:461","publicCode":"1","name":"Harestua stasjon","situations":[]}},"serviceJourney":{"id":"GJB:ServiceJourney:1-21-215","privateCode":"215","linePublicCode":"R30","wheelchairAccessible":"noInformation","journeyPattern":{"id":"GJB:JourneyPattern:1-6","name":"R30 to Gjøvik stasjon (RB:NSR:Quay:502) from Oslo S (RB:NSR:Quay:562) via Jaren stasjon (RB:NSR:Quay:548)","line":{"id":"GJB:Line:R30","publicCode":"R30","name":"R30","transportMode":"rail","presentation":{"colour":"05782D","textColour":"FFFFFF"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"notices":[]},"notices":[],"situations":[]},"line":{"id":"GJB:Line:R30","publicCode":"R30","name":"R30","transportMode":"rail","presentation":{"colour":"05782D","textColour":"FFFFFF"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"intermediateQuays":[{"id":"NSR:Quay:577","name":"Grefsen stasjon","publicCode":"1"},{"id":"NSR:Quay:494","name":"Nydalen stasjon","publicCode":"1"},{"id":"NSR:Quay:873","name":"Kjelsås stasjon","publicCode":"1"},{"id":"NSR:Quay:440","name":"Nittedal stasjon","publicCode":"1"}],"intermediateEstimatedCalls":[{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:577","name":"Grefsen stasjon","stopPlace":{"id":"NSR:StopPlace:343"}},"expectedArrivalTime":"2019-11-10T19:08:30+0100","expectedDepartureTime":"2019-11-10T19:09:00+0100","aimedArrivalTime":"2019-11-10T19:08:00+0100","aimedDepartureTime":"2019-11-10T19:09:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:494","name":"Nydalen stasjon","stopPlace":{"id":"NSR:StopPlace:301"}},"expectedArrivalTime":"2019-11-10T19:10:30+0100","expectedDepartureTime":"2019-11-10T19:11:00+0100","aimedArrivalTime":"2019-11-10T19:10:00+0100","aimedDepartureTime":"2019-11-10T19:11:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:873","name":"Kjelsås stasjon","stopPlace":{"id":"NSR:StopPlace:530"}},"expectedArrivalTime":"2019-11-10T19:14:00+0100","expectedDepartureTime":"2019-11-10T19:17:00+0100","aimedArrivalTime":"2019-11-10T19:14:00+0100","aimedDepartureTime":"2019-11-10T19:17:00+0100"},{"date":"2019-11-10","forBoarding":true,"forAlighting":true,"quay":{"id":"NSR:Quay:440","name":"Nittedal stasjon","stopPlace":{"id":"NSR:StopPlace:267"}},"expectedArrivalTime":"2019-11-10T19:29:30+0100","expectedDepartureTime":"2019-11-10T19:30:00+0100","aimedArrivalTime":"2019-11-10T19:29:00+0100","aimedDepartureTime":"2019-11-10T19:30:00+0100"}],"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"operator":{"id":"GJB:Operator:502","name":"Vy"}},{"mode":"rail","aimedStartTime":"2019-11-10T19:52:00+0100","aimedEndTime":"2019-11-10T20:05:00+0100","expectedStartTime":"2019-11-10T19:52:00+0100","expectedEndTime":"2019-11-10T20:05:30+0100","realtime":true,"distance":11505.820267936837,"duration":810,"ride":true,"fromPlace":{"name":"Harestua stasjon","latitude":60.206235,"longitude":10.722584,"quay":{"id":"NSR:Quay:461","publicCode":"1","name":"Harestua stasjon","situations":[]}},"toPlace":{"name":"Hakadal stasjon","latitude":60.117411,"longitude":10.829261,"quay":{"id":"NSR:Quay:96","publicCode":"1","name":"Hakadal stasjon","situations":[]}},"serviceJourney":{"id":"GJB:ServiceJourney:1-69-258","privateCode":"258","linePublicCode":"L3","wheelchairAccessible":"noInformation","journeyPattern":{"id":"GJB:JourneyPattern:1-24","name":"L3 to Oslo S (RB:NSR:Quay:562) from Jaren stasjon (RB:NSR:Quay:548) like trip RB_GJB:ServiceJourney:1-69-258","line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"notices":[]},"notices":[],"situations":[]},"line":{"id":"GJB:Line:L3","publicCode":"L3","name":"L3","transportMode":"rail","presentation":{"colour":"8CBE23","textColour":"000000"},"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"notices":[],"situations":[]},"intermediateQuays":[],"intermediateEstimatedCalls":[],"authority":{"id":"GJB:Authority:GJB","name":"Vy"},"operator":{"id":"GJB:Operator:502","name":"Vy"}}]}],"expiredTickets":[]}
+{
+    "activeTickets": [
+        {
+            "startTime": "2019-11-10T19:42:00+0100",
+            "endTime": "2019-11-10T20:20:30+0100",
+            "duration": 2310,
+            "waitingTime": 0,
+            "walkDistance": 0,
+            "legs": [
+                {
+                    "mode": "rail",
+                    "aimedStartTime": "2019-11-10T19:42:00+0100",
+                    "aimedEndTime": "2019-11-10T20:20:00+0100",
+                    "expectedStartTime": "2019-11-10T19:42:00+0100",
+                    "expectedEndTime": "2019-11-10T20:20:30+0100",
+                    "realtime": true,
+                    "distance": 26022.47433556979,
+                    "duration": 2310,
+                    "ride": true,
+                    "fromPlace": {
+                        "name": "Oslo S",
+                        "latitude": 59.910049,
+                        "longitude": 10.754663,
+                        "quay": {
+                            "id": "NSR:Quay:562",
+                            "publicCode": "16",
+                            "name": "Oslo S",
+                            "situations": []
+                        }
+                    },
+                    "toPlace": {
+                        "name": "Hakadal stasjon",
+                        "latitude": 60.117411,
+                        "longitude": 10.829261,
+                        "quay": {
+                            "id": "NSR:Quay:96",
+                            "publicCode": "1",
+                            "name": "Hakadal stasjon",
+                            "situations": []
+                        }
+                    },
+                    "serviceJourney": {
+                        "id": "GJB:ServiceJourney:1-64-253",
+                        "privateCode": "253",
+                        "linePublicCode": "L3",
+                        "wheelchairAccessible": "noInformation",
+                        "journeyPattern": {
+                            "id": "GJB:JourneyPattern:1-29",
+                            "name": "L3 to Jaren stasjon (RB:NSR:Quay:548) from Oslo S (RB:NSR:Quay:562) like trip RB_GJB:ServiceJourney:1-50-239",
+                            "line": {
+                                "id": "GJB:Line:L3",
+                                "publicCode": "L3",
+                                "name": "L3",
+                                "transportMode": "rail",
+                                "presentation": {
+                                    "colour": "8CBE23",
+                                    "textColour": "000000"
+                                },
+                                "authority": {
+                                    "id": "GJB:Authority:GJB",
+                                    "name": "Vy"
+                                },
+                                "notices": [],
+                                "situations": []
+                            },
+                            "notices": []
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "line": {
+                        "id": "GJB:Line:L3",
+                        "publicCode": "L3",
+                        "name": "L3",
+                        "transportMode": "rail",
+                        "presentation": {
+                            "colour": "8CBE23",
+                            "textColour": "000000"
+                        },
+                        "authority": {
+                            "id": "GJB:Authority:GJB",
+                            "name": "Vy"
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "intermediateQuays": [
+                        {
+                            "id": "NSR:Quay:573",
+                            "name": "Tøyen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:577",
+                            "name": "Grefsen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:494",
+                            "name": "Nydalen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:873",
+                            "name": "Kjelsås stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:1099",
+                            "name": "Snippen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:353",
+                            "name": "Movatn stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:440",
+                            "name": "Nittedal stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:822",
+                            "name": "Åneby stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:632",
+                            "name": "Varingskollen stasjon",
+                            "publicCode": "1"
+                        }
+                    ],
+                    "intermediateEstimatedCalls": [
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:573",
+                                "name": "Tøyen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:339"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:46:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:47:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:46:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:47:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:577",
+                                "name": "Grefsen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:343"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:49:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:50:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:49:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:50:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:494",
+                                "name": "Nydalen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:301"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:51:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:52:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:51:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:52:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:873",
+                                "name": "Kjelsås stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:530"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:54:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:55:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:54:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:55:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:1099",
+                                "name": "Snippen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:666"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:00:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:01:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:00:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:01:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:353",
+                                "name": "Movatn stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:218"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:03:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:04:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:03:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:04:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:440",
+                                "name": "Nittedal stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:267"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:09:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:10:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:09:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:10:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:822",
+                                "name": "Åneby stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:502"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:14:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:15:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:14:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:15:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:632",
+                                "name": "Varingskollen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:379"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:16:40+0100",
+                            "expectedDepartureTime": "2019-11-10T20:17:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:16:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:17:00+0100"
+                        }
+                    ],
+                    "authority": {
+                        "id": "GJB:Authority:GJB",
+                        "name": "Vy"
+                    },
+                    "operator": {
+                        "id": "GJB:Operator:502",
+                        "name": "Vy"
+                    }
+                }
+            ]
+        },
+        {
+            "startTime": "2019-11-10T19:42:00+0100",
+            "endTime": "2019-11-10T20:20:30+0100",
+            "duration": 2310,
+            "waitingTime": 0,
+            "walkDistance": 0,
+            "legs": [
+                {
+                    "mode": "rail",
+                    "aimedStartTime": "2019-11-10T19:42:00+0100",
+                    "aimedEndTime": "2019-11-10T20:20:00+0100",
+                    "expectedStartTime": "2019-11-10T19:42:00+0100",
+                    "expectedEndTime": "2019-11-10T20:20:30+0100",
+                    "realtime": true,
+                    "distance": 26022.47433556979,
+                    "duration": 2310,
+                    "ride": true,
+                    "fromPlace": {
+                        "name": "Oslo S",
+                        "latitude": 59.910049,
+                        "longitude": 10.754663,
+                        "quay": {
+                            "id": "NSR:Quay:562",
+                            "publicCode": "16",
+                            "name": "Oslo S",
+                            "situations": []
+                        }
+                    },
+                    "toPlace": {
+                        "name": "Hakadal stasjon",
+                        "latitude": 60.117411,
+                        "longitude": 10.829261,
+                        "quay": {
+                            "id": "NSR:Quay:96",
+                            "publicCode": "1",
+                            "name": "Hakadal stasjon",
+                            "situations": []
+                        }
+                    },
+                    "serviceJourney": {
+                        "id": "GJB:ServiceJourney:1-64-253",
+                        "privateCode": "253",
+                        "linePublicCode": "L3",
+                        "wheelchairAccessible": "noInformation",
+                        "journeyPattern": {
+                            "id": "GJB:JourneyPattern:1-29",
+                            "name": "L3 to Jaren stasjon (RB:NSR:Quay:548) from Oslo S (RB:NSR:Quay:562) like trip RB_GJB:ServiceJourney:1-50-239",
+                            "line": {
+                                "id": "GJB:Line:L3",
+                                "publicCode": "L3",
+                                "name": "L3",
+                                "transportMode": "rail",
+                                "presentation": {
+                                    "colour": "8CBE23",
+                                    "textColour": "000000"
+                                },
+                                "authority": {
+                                    "id": "GJB:Authority:GJB",
+                                    "name": "Vy"
+                                },
+                                "notices": [],
+                                "situations": []
+                            },
+                            "notices": []
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "line": {
+                        "id": "GJB:Line:L3",
+                        "publicCode": "L3",
+                        "name": "L3",
+                        "transportMode": "rail",
+                        "presentation": {
+                            "colour": "8CBE23",
+                            "textColour": "000000"
+                        },
+                        "authority": {
+                            "id": "GJB:Authority:GJB",
+                            "name": "Vy"
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "intermediateQuays": [
+                        {
+                            "id": "NSR:Quay:573",
+                            "name": "Tøyen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:577",
+                            "name": "Grefsen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:494",
+                            "name": "Nydalen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:873",
+                            "name": "Kjelsås stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:1099",
+                            "name": "Snippen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:353",
+                            "name": "Movatn stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:440",
+                            "name": "Nittedal stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:822",
+                            "name": "Åneby stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:632",
+                            "name": "Varingskollen stasjon",
+                            "publicCode": "1"
+                        }
+                    ],
+                    "intermediateEstimatedCalls": [
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:573",
+                                "name": "Tøyen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:339"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:46:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:47:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:46:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:47:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:577",
+                                "name": "Grefsen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:343"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:49:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:50:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:49:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:50:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:494",
+                                "name": "Nydalen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:301"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:51:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:52:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:51:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:52:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:873",
+                                "name": "Kjelsås stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:530"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:54:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:55:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:54:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:55:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:1099",
+                                "name": "Snippen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:666"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:00:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:01:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:00:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:01:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:353",
+                                "name": "Movatn stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:218"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:03:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:04:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:03:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:04:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:440",
+                                "name": "Nittedal stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:267"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:09:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:10:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:09:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:10:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:822",
+                                "name": "Åneby stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:502"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:14:30+0100",
+                            "expectedDepartureTime": "2019-11-10T20:15:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:14:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:15:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:632",
+                                "name": "Varingskollen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:379"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T20:16:40+0100",
+                            "expectedDepartureTime": "2019-11-10T20:17:00+0100",
+                            "aimedArrivalTime": "2019-11-10T20:16:00+0100",
+                            "aimedDepartureTime": "2019-11-10T20:17:00+0100"
+                        }
+                    ],
+                    "authority": {
+                        "id": "GJB:Authority:GJB",
+                        "name": "Vy"
+                    },
+                    "operator": {
+                        "id": "GJB:Operator:502",
+                        "name": "Vy"
+                    }
+                }
+            ]
+        },
+        {
+            "startTime": "2019-11-10T19:02:00+0100",
+            "endTime": "2019-11-10T20:05:30+0100",
+            "duration": 3810,
+            "waitingTime": 330,
+            "walkDistance": 0,
+            "legs": [
+                {
+                    "mode": "rail",
+                    "aimedStartTime": "2019-11-10T19:02:00+0100",
+                    "aimedEndTime": "2019-11-10T19:46:00+0100",
+                    "expectedStartTime": "2019-11-10T19:02:00+0100",
+                    "expectedEndTime": "2019-11-10T19:46:30+0100",
+                    "realtime": true,
+                    "distance": 36172.674800074434,
+                    "duration": 2670,
+                    "ride": true,
+                    "fromPlace": {
+                        "name": "Oslo S",
+                        "latitude": 59.910049,
+                        "longitude": 10.754663,
+                        "quay": {
+                            "id": "NSR:Quay:562",
+                            "publicCode": "16",
+                            "name": "Oslo S",
+                            "situations": []
+                        }
+                    },
+                    "toPlace": {
+                        "name": "Harestua stasjon",
+                        "latitude": 60.206235,
+                        "longitude": 10.722584,
+                        "quay": {
+                            "id": "NSR:Quay:461",
+                            "publicCode": "1",
+                            "name": "Harestua stasjon",
+                            "situations": []
+                        }
+                    },
+                    "serviceJourney": {
+                        "id": "GJB:ServiceJourney:1-21-215",
+                        "privateCode": "215",
+                        "linePublicCode": "R30",
+                        "wheelchairAccessible": "noInformation",
+                        "journeyPattern": {
+                            "id": "GJB:JourneyPattern:1-6",
+                            "name": "R30 to Gjøvik stasjon (RB:NSR:Quay:502) from Oslo S (RB:NSR:Quay:562) via Jaren stasjon (RB:NSR:Quay:548)",
+                            "line": {
+                                "id": "GJB:Line:R30",
+                                "publicCode": "R30",
+                                "name": "R30",
+                                "transportMode": "rail",
+                                "presentation": {
+                                    "colour": "05782D",
+                                    "textColour": "FFFFFF"
+                                },
+                                "authority": {
+                                    "id": "GJB:Authority:GJB",
+                                    "name": "Vy"
+                                },
+                                "notices": [],
+                                "situations": []
+                            },
+                            "notices": []
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "line": {
+                        "id": "GJB:Line:R30",
+                        "publicCode": "R30",
+                        "name": "R30",
+                        "transportMode": "rail",
+                        "presentation": {
+                            "colour": "05782D",
+                            "textColour": "FFFFFF"
+                        },
+                        "authority": {
+                            "id": "GJB:Authority:GJB",
+                            "name": "Vy"
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "intermediateQuays": [
+                        {
+                            "id": "NSR:Quay:577",
+                            "name": "Grefsen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:494",
+                            "name": "Nydalen stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:873",
+                            "name": "Kjelsås stasjon",
+                            "publicCode": "1"
+                        },
+                        {
+                            "id": "NSR:Quay:440",
+                            "name": "Nittedal stasjon",
+                            "publicCode": "1"
+                        }
+                    ],
+                    "intermediateEstimatedCalls": [
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:577",
+                                "name": "Grefsen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:343"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:08:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:09:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:08:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:09:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:494",
+                                "name": "Nydalen stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:301"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:10:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:11:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:10:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:11:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:873",
+                                "name": "Kjelsås stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:530"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:14:00+0100",
+                            "expectedDepartureTime": "2019-11-10T19:17:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:14:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:17:00+0100"
+                        },
+                        {
+                            "date": "2019-11-10",
+                            "forBoarding": true,
+                            "forAlighting": true,
+                            "quay": {
+                                "id": "NSR:Quay:440",
+                                "name": "Nittedal stasjon",
+                                "stopPlace": {
+                                    "id": "NSR:StopPlace:267"
+                                }
+                            },
+                            "expectedArrivalTime": "2019-11-10T19:29:30+0100",
+                            "expectedDepartureTime": "2019-11-10T19:30:00+0100",
+                            "aimedArrivalTime": "2019-11-10T19:29:00+0100",
+                            "aimedDepartureTime": "2019-11-10T19:30:00+0100"
+                        }
+                    ],
+                    "authority": {
+                        "id": "GJB:Authority:GJB",
+                        "name": "Vy"
+                    },
+                    "operator": {
+                        "id": "GJB:Operator:502",
+                        "name": "Vy"
+                    }
+                },
+                {
+                    "mode": "rail",
+                    "aimedStartTime": "2019-11-10T19:52:00+0100",
+                    "aimedEndTime": "2019-11-10T20:05:00+0100",
+                    "expectedStartTime": "2019-11-10T19:52:00+0100",
+                    "expectedEndTime": "2019-11-10T20:05:30+0100",
+                    "realtime": true,
+                    "distance": 11505.820267936837,
+                    "duration": 810,
+                    "ride": true,
+                    "fromPlace": {
+                        "name": "Harestua stasjon",
+                        "latitude": 60.206235,
+                        "longitude": 10.722584,
+                        "quay": {
+                            "id": "NSR:Quay:461",
+                            "publicCode": "1",
+                            "name": "Harestua stasjon",
+                            "situations": []
+                        }
+                    },
+                    "toPlace": {
+                        "name": "Hakadal stasjon",
+                        "latitude": 60.117411,
+                        "longitude": 10.829261,
+                        "quay": {
+                            "id": "NSR:Quay:96",
+                            "publicCode": "1",
+                            "name": "Hakadal stasjon",
+                            "situations": []
+                        }
+                    },
+                    "serviceJourney": {
+                        "id": "GJB:ServiceJourney:1-69-258",
+                        "privateCode": "258",
+                        "linePublicCode": "L3",
+                        "wheelchairAccessible": "noInformation",
+                        "journeyPattern": {
+                            "id": "GJB:JourneyPattern:1-24",
+                            "name": "L3 to Oslo S (RB:NSR:Quay:562) from Jaren stasjon (RB:NSR:Quay:548) like trip RB_GJB:ServiceJourney:1-69-258",
+                            "line": {
+                                "id": "GJB:Line:L3",
+                                "publicCode": "L3",
+                                "name": "L3",
+                                "transportMode": "rail",
+                                "presentation": {
+                                    "colour": "8CBE23",
+                                    "textColour": "000000"
+                                },
+                                "authority": {
+                                    "id": "GJB:Authority:GJB",
+                                    "name": "Vy"
+                                },
+                                "notices": [],
+                                "situations": []
+                            },
+                            "notices": []
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "line": {
+                        "id": "GJB:Line:L3",
+                        "publicCode": "L3",
+                        "name": "L3",
+                        "transportMode": "rail",
+                        "presentation": {
+                            "colour": "8CBE23",
+                            "textColour": "000000"
+                        },
+                        "authority": {
+                            "id": "GJB:Authority:GJB",
+                            "name": "Vy"
+                        },
+                        "notices": [],
+                        "situations": []
+                    },
+                    "intermediateQuays": [],
+                    "intermediateEstimatedCalls": [],
+                    "authority": {
+                        "id": "GJB:Authority:GJB",
+                        "name": "Vy"
+                    },
+                    "operator": {
+                        "id": "GJB:Operator:502",
+                        "name": "Vy"
+                    }
+                }
+            ]
+        }
+    ],
+    "expiredTickets": []
+}
