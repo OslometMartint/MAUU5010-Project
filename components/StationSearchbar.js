@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { throttle } from 'underscore';
 
 function StationSearchBar() {
     const [searchInput, setSearchInput] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState();
-    const throttledValue = throttle(searchTerm, 1000);
 
     useEffect(() => {
         getSuggestions();
-    }, [throttledValue]);
+    });
 
     const handleOnChange = (e) => {
         setSearchInput(e.target.value);
