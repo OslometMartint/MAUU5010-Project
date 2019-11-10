@@ -10,9 +10,16 @@ const Ticket = ({title, text, small, price, url}) => {
                     margin-bottom: 1em;
                     padding: 1em;
                 }
+                li::focus-within {
+                    blackground-color: #360000;
+                    color: #fafafa;
+                }
                 a {
                     text-decoration: none;
                     color: #2B2B2B;
+                }
+                a:focus {
+                    outline: 0;
                 }
                 h3 {
                     margin-top: 0;

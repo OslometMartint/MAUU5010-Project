@@ -1,35 +1,38 @@
 import React, { useState, useEffect } from 'react';
 
-function StationSearchBar({setValue}) {
+function StationSearchBar({setValue, value, valid}) {
     const [searchInput, setSearchInput] = useState("");
-    const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState();
-
-    useEffect(() => {
-        getSuggestions();
-    });
 
     const handleOnChange = (e) => {
         setSearchInput(e.target.value);
+        valid(e.target.value === value);
+        console.log(e.nativeEvent.type);
+        if(e.nativeEvent.type === 'input') {
+            getSuggestions();
+        }
     };
 
     const handleOnKeyPress = (e) => {
-        setSearchTerm(e.target.value);
+        setSearchInput(e.target.value);
+        console.log('keypress', e.target.value);
+        valid(e.target.value === value);
     };
 
     const handleSuggestionOnClick = (e) => {
         setSearchInput(e.target.textContent);
-        setSearchTerm("");
         setValue(e.target.textContent);
+        setSuggestions("");
+        valid(true);
     };
 
     async function getSuggestions() {
-        if (!searchTerm) {
+        if (!searchInput) {
             setSuggestions("");
             return;
         }
 
-        const url = "https://api.entur.io/geocoder/v1/autocomplete?text=" + searchTerm + "&size=5&lang=no";
+        const url = "https://api.entur.io/geocoder/v1/autocomplete?text=" + searchInput + "&size=5&lang=no";
         const res = await fetch(url);
         const data = await res.json();
 
@@ -43,7 +46,7 @@ function StationSearchBar({setValue}) {
 
     return (
         <div>
-            <input value={searchInput} onChange={handleOnChange} onKeyPress={handleOnKeyPress} type="text"></input>
+            <input value={searchInput} onChange={handleOnChange} onBlur={() => setTimeout(() => {valid && setSuggestions('')}, 300)} onKeyPress={handleOnKeyPress} type="text" />
             <ul>
                 {Array.isArray(suggestions) && 
                 suggestions.map((suggestion, i) => {
