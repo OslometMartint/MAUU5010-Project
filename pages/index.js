@@ -3,6 +3,15 @@ import StationSearchBar from '../components/StationSearchbar';
 import DeparturesDisplay from '../components/DeparturesDisplay';
 import EnturService, { convertFeatureToLocation } from '@entur/sdk'
 
+const debounce = (fn, delay) => {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+};
+
+
 const Index = () => {
   const [fromValue, setFromValue] = useState('');
   const [isFromValueValid, setFromValueValid] = useState(false);
@@ -11,7 +20,20 @@ const Index = () => {
   const [departures, setDepartures] = useState([]);
   const service = new EnturService({ clientName: 'Oslomet-s331044_MAUU5010_project' })
 
+  const saveNote = debounce(contents => {
+    fetch(`${location.origin}/api`, {
+      method: 'post',
+      credentials: 'same-origin',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(contents),
+    });
+  }, 200);
 
+  const buyTicket = (data) => {
+    saveNote(data);
+  }
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (isFromValueValid && isToValueValid) {
@@ -65,9 +87,10 @@ const Index = () => {
           <ul role="list">
             {departures.map((departure, idx) =>
               <li key={idx}>
-                <toAndfrom><h3>{departure.startTime.slice(11, 16)} - {departure.endTime.slice(11, 16)}</h3></toAndfrom>
+                <h3>{departure.startTime.slice(11, 16)} - {departure.endTime.slice(11, 16)}</h3>
                 {timeConvert(departure.duration)}
                 Pris: {Math.round(departure.duration / 120)},-
+                <button onClick={() => buyTicket(departure)}>Kjøp Bi</button>
               </li>)
             }
           </ul>
@@ -95,8 +118,8 @@ const Index = () => {
             }
             h3 {
                 margin-top: 0;
+                float: right;
             }
-            toAndFrom {float: right;}
           `}</style>
         </>}
     </div>
