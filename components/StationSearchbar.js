@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function StationSearchBar() {
+function StationSearchBar({setValue}) {
     const [searchInput, setSearchInput] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState();
@@ -20,6 +20,7 @@ function StationSearchBar() {
     const handleSuggestionOnClick = (e) => {
         setSearchInput(e.target.textContent);
         setSearchTerm("");
+        setValue(e.target.textContent);
     };
 
     async function getSuggestions() {
@@ -33,7 +34,6 @@ function StationSearchBar() {
         const data = await res.json();
 
         const newSuggestions = [];
-
         for (let i = 0; i < data.features.length; i++) {
             newSuggestions.push(data.features[i].properties.label);
         }

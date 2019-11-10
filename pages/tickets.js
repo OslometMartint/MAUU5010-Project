@@ -24,7 +24,7 @@ const Ticket = ({title, text, small, price, url}) => {
                     <a>
                         <h3>{title}</h3>
                         <p>{text}</p>
-                        <small>{small}</small><small class="price">{price}</small>
+                        <small>{small}</small><small className="price">{price}</small>
                     </a>
                 </Link>
             </li>
@@ -47,16 +47,16 @@ const Tickets = () => {
                 {activeTickets.length > 0 &&                 
                     <>
                         <h2>Aktive</h2>
-                        {activeTickets.map(ticket => 
-                            <Ticket title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
+                        {activeTickets.map((ticket, idx) => 
+                            <Ticket key={idx} title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
                         
                     </>
                 }
                 {expiredTickets.length > 0 &&
                 <>
                     <h2>Utløpt</h2>
-                    {expiredTickets.map(ticket =>  
-                    <Ticket title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
+                    {expiredTickets.map((ticket, idx) =>  
+                    <Ticket key={idx} title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
                 </>
                 }
             </ul>
