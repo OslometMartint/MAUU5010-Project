@@ -25,6 +25,7 @@
     "nprogress": "^0.2.0",
     "react": "^16.11.0",
     "react-accessible-typeahead": "^0.2.1",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "util": "^0.12.1"
   }
 }
