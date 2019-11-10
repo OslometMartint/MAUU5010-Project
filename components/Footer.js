@@ -12,7 +12,7 @@ const Footer = ({router}) => {
           background: #360000;
           display: flex;
           align-items: center;
-          position: absolute;
+          position: sticky;
           bottom: 0;
         }
         nav {

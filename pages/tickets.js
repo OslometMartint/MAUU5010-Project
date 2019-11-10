@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {activeTickets, expiredTickets} from '../data/tickets';
-const Ticket = ({title, text, small, price, url}) => {
+import {timeConvert} from '../lib/utils';
+const Ticket = ({ticket}) => {
     return (
         <>
             <style jsx>{`
@@ -27,11 +28,13 @@ const Ticket = ({title, text, small, price, url}) => {
                 small.price {float: right;}
             `}</style>
             <li>
-                <Link href={url}>
+                <Link href="#">
                     <a>
-                        <h3>{title}</h3>
-                        <p>{text}</p>
-                        <small>{small}</small><small className="price">{price}</small>
+                        <h3>{ticket.legs[0].fromPlace.name} - {ticket.legs[ticket.legs.length-1].toPlace.name}</h3>
+                        <p>       
+                            {new Date(ticket.startTime).toLocaleTimeString('nb-NO', {hour: '2-digit', minute:'2-digit'})} - {new Date(ticket.endTime).toLocaleTimeString('nb-NO', {hour: '2-digit', minute:'2-digit'})}
+                        </p>
+                        <small>{timeConvert(ticket.duration)}</small><small className="price">{Math.round(ticket.duration / 120)} NOK</small>
                     </a>
                 </Link>
             </li>
@@ -55,7 +58,7 @@ const Tickets = () => {
                     <>
                         <h2>Aktive</h2>
                         {activeTickets.map((ticket, idx) => 
-                            <Ticket key={idx} title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
+                            <Ticket key={idx} ticket={ticket}/>)}
                         
                     </>
                 }
@@ -63,7 +66,7 @@ const Tickets = () => {
                 <>
                     <h2>Utløpt</h2>
                     {expiredTickets.map((ticket, idx) =>  
-                    <Ticket key={idx} title={ticket.title} text={ticket.text} small={ticket.small} price={ticket.price} url={ticket.url}/>)}
+                    <Ticket key={idx} ticket={ticket}/>)}
                 </>
                 }
             </ul>

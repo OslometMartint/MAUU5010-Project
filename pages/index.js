@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import StationSearchBar from '../components/StationSearchbar';
-import DeparturesDisplay from '../components/DeparturesDisplay';
+import {timeConvert} from '../lib/utils';
 import EnturService, { convertFeatureToLocation } from '@entur/sdk'
 
 const debounce = (fn, delay) => {
@@ -61,17 +61,6 @@ const Index = () => {
     console.log(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')))
   }
 
-  function timeConvert(d) {
-    d = Number(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
-
-    var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return (hDisplay ? hDisplay : "") + (mDisplay ? mDisplay : "");
-  }
 
   return (
     <div>
