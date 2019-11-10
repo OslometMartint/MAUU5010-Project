@@ -13,12 +13,14 @@ function DeparturesDisplay(setFrom, setTo) {
         }
 
         const tripPatterns = await service.getTripPatterns({
+            modes: ['foot'],
             searchDate: new Date(),
             from: convertFeatureToLocation(fromFeature),
             to: convertFeatureToLocation(toFeature),
         })
 
         console.log(tripPatterns)
+        tripPatterns.filter(trip => trip.legs.map(leg => leg.mode !== 'rails'));
     }
 }
 

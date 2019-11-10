@@ -55,8 +55,10 @@ const Index = () => {
       to: convertFeatureToLocation(toFeature),
     })
 
-    console.log(tripPatterns)
-    setDepartures(tripPatterns);
+
+
+    setDepartures(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')));
+    console.log(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')))
   }
 
   function timeConvert(d) {
@@ -88,6 +90,7 @@ const Index = () => {
             {departures.map((departure, idx) =>
               <li key={idx}>
                 <h3>{departure.startTime.slice(11, 16)} - {departure.endTime.slice(11, 16)}</h3>
+
                 {timeConvert(departure.duration)}
                 Pris: {Math.round(departure.duration / 120)},-
                 <button onClick={() => buyTicket(departure)}>Kjøp Bi</button>
