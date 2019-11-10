@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 function StationSearchBar({setValue, value, valid}) {
     const [searchInput, setSearchInput] = useState("");
-    const [suggestions, setSuggestions] = useState();
+    const [suggestions, setSuggestions] = useState([]);
 
     const handleOnChange = (e) => {
         setSearchInput(e.target.value);
-        valid(e.target.value === value);
+        valid(e.target.value.toLowerCase() === value.toLowerCase());
         console.log(e.nativeEvent.type);
         if(e.nativeEvent.type === 'input') {
             getSuggestions();
@@ -16,19 +16,29 @@ function StationSearchBar({setValue, value, valid}) {
     const handleOnKeyPress = (e) => {
         setSearchInput(e.target.value);
         console.log('keypress', e.target.value);
-        valid(e.target.value === value);
+        valid(e.target.value.toLowerCase() === value.toLowerCase());
     };
 
     const handleSuggestionOnClick = (e) => {
         setSearchInput(e.target.textContent);
         setValue(e.target.textContent);
-        setSuggestions("");
+        setSuggestions([]);
         valid(true);
     };
 
+    const handleOnBlur = () => {
+        setTimeout(() => {
+            if(suggestions.findIndex(a => a.toLowerCase() === searchInput.toLowerCase()) > -1){
+                valid(true);
+                setValue(searchInput);
+                setSuggestions([])
+            }
+        }, 300)
+    }
+
     async function getSuggestions() {
         if (!searchInput) {
-            setSuggestions("");
+            setSuggestions([]);
             return;
         }
 
@@ -46,7 +56,7 @@ function StationSearchBar({setValue, value, valid}) {
 
     return (
         <div>
-            <input value={searchInput} onChange={handleOnChange} onBlur={() => setTimeout(() => {valid && setSuggestions('')}, 300)} onKeyPress={handleOnKeyPress} type="text" />
+            <input value={searchInput} onChange={handleOnChange} onBlur={handleOnBlur} onKeyPress={handleOnKeyPress} type="text" />
             <ul>
                 {Array.isArray(suggestions) && 
                 suggestions.map((suggestion, i) => {
