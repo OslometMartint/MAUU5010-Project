@@ -4,12 +4,13 @@ const Clock = () => {
     const [date, setDate] = useState(new Date())
 
     useEffect(() => {
-        const timerInterval = setInterval(() => { setDate('test') }, 1000)
+        const timerInterval = setInterval(() => { setDate(new Date().toLocaleTimeString('nb-NO')) }, 1000);
         return () => {
             clearInterval(timerInterval)
         }
     })
-    return (<span className="clock">{date}</span>)
+    console.log(date);
+    return (<time className="clock">{'' + date}</time>)
 }
 
 export default Clock;

@@ -72,7 +72,7 @@ const Ticket = ({ ticket }) => {
                             <>
                                 <hr />
                                 <p>
-                                    Remaining time for changes: Sett inn klokke her
+                                    Remaining time for changes: <Clock />
                                 </p>
                                 <button>Change date/time</button>
                                 <button>Refund ticket</button>
