@@ -20,7 +20,7 @@ const Index = () => {
   const [departures, setDepartures] = useState([]);
   const service = new EnturService({ clientName: 'Oslomet-s331044_MAUU5010_project' })
 
-  const saveNote = debounce(contents => {
+  const postTicket = debounce(contents => {
     fetch(`${location.origin}/api`, {
       method: 'post',
       credentials: 'same-origin',
@@ -31,8 +31,19 @@ const Index = () => {
     });
   }, 200);
 
+  if(process.browser) {
+    fetch(`${location.origin}/api/expiretickets`, {
+      method: 'post',
+      credentials: 'same-origin',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({}),
+    });
+  }
+
   const buyTicket = (data) => {
-    saveNote(data);
+    postTicket(data);
   }
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +51,7 @@ const Index = () => {
       fetchDepartures();
     }
   }
+
 
   async function fetchDepartures() {
     const [fromFeature] = await service.getFeatures(fromValue)
@@ -56,7 +68,6 @@ const Index = () => {
     })
 
 
-
     setDepartures(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')));
     console.log(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')))
   }
@@ -64,11 +75,10 @@ const Index = () => {
 
   return (
     <div>
-      <h1>Hello Next.js</h1>
       <form onSubmit={handleOnSubmit} action="">
-        Fra:
+        From:
         <StationSearchBar setValue={setFromValue} value={fromValue} valid={setFromValueValid} />
-        Til:
+        To:
         <StationSearchBar setValue={setToValue} value={toValue} valid={setToValueValid} />
         <button>Vis Avganger</button>
       </form>

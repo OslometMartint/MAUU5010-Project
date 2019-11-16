@@ -56,7 +56,7 @@ const Tickets = () => {
             <ul>
                 {activeTickets.length > 0 &&                 
                     <>
-                        <h2>Aktive</h2>
+                        <h2>Active Tickets</h2>
                         {activeTickets.map((ticket, idx) => 
                             <Ticket key={idx} ticket={ticket}/>)}
                         
@@ -64,7 +64,7 @@ const Tickets = () => {
                 }
                 {expiredTickets.length > 0 &&
                 <>
-                    <h2>Utløpt</h2>
+                    <h2>Expired Tickets</h2>
                     {expiredTickets.map((ticket, idx) =>  
                     <Ticket key={idx} ticket={ticket}/>)}
                 </>
