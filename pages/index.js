@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import StationSearchBar from '../components/StationSearchbar';
-import {timeConvert} from '../lib/utils';
+import { timeConvert } from '../lib/utils';
 import EnturService, { convertFeatureToLocation } from '@entur/sdk'
 import Swal from 'sweetalert2';
-
 
 const debounce = (fn, delay) => {
   let timer = null;
@@ -12,7 +11,6 @@ const debounce = (fn, delay) => {
     timer = setTimeout(() => fn.apply(this, args), delay);
   };
 };
-
 
 const Index = () => {
   const [fromValue, setFromValue] = useState('');
@@ -33,7 +31,7 @@ const Index = () => {
     });
   }, 200);
 
-  if(process.browser) {
+  if (process.browser) {
     fetch(`${location.origin}/api/expiretickets`, {
       method: 'post',
       credentials: 'same-origin',
@@ -47,9 +45,10 @@ const Index = () => {
   const buyTicket = (data) => {
     postTicket(data);
     Swal.fire('Congratulations!',
-    `You have bought a ticket from ${fromValue} to ${toValue}!`,
-    'success')
+      `You have bought a ticket from ${fromValue} to ${toValue}!`,
+      'success')
   }
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (isFromValueValid && isToValueValid) {
@@ -72,11 +71,9 @@ const Index = () => {
       to: convertFeatureToLocation(toFeature),
     })
 
-
     setDepartures(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')));
     console.log(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')))
   }
-
 
   return (
     <div>
@@ -85,7 +82,7 @@ const Index = () => {
         <StationSearchBar setValue={setFromValue} value={fromValue} valid={setFromValueValid} />
         To:
         <StationSearchBar setValue={setToValue} value={toValue} valid={setToValueValid} />
-        <button>Vis Avganger</button>
+        <button>Show departures</button>
       </form>
       {departures.length > 0 &&
         <>
@@ -97,7 +94,7 @@ const Index = () => {
 
                 {timeConvert(departure.duration)}
                 Pris: {Math.round(departure.duration / 120)},-
-                <button onClick={() => buyTicket(departure)}>Kjøp Bi</button>
+                <button onClick={() => buyTicket(departure)}>Buy ticket</button>
               </li>)
             }
           </ul>

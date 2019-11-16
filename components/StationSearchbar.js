@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import debounce from './Debounce';
 
 function StationSearchBar({ setValue, value, valid }) {
     const [searchInput, setSearchInput] = useState("");
@@ -37,6 +38,7 @@ function StationSearchBar({ setValue, value, valid }) {
     }
 
     async function getSuggestions() {
+        console.log("getSuggestions triggered")
         if (!searchInput) {
             setSuggestions([]);
             return;
