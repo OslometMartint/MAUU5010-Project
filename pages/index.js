@@ -2,6 +2,8 @@ import { useState } from 'react';
 import StationSearchBar from '../components/StationSearchbar';
 import {timeConvert} from '../lib/utils';
 import EnturService, { convertFeatureToLocation } from '@entur/sdk'
+import Swal from 'sweetalert2';
+
 
 const debounce = (fn, delay) => {
   let timer = null;
@@ -44,6 +46,9 @@ const Index = () => {
 
   const buyTicket = (data) => {
     postTicket(data);
+    Swal.fire('Congratulations!',
+    `You have bought a ticket from ${fromValue} to ${toValue}!`,
+    'success')
   }
   const handleOnSubmit = (e) => {
     e.preventDefault();

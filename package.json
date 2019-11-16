@@ -27,6 +27,7 @@
     "react": "^16.11.0",
     "react-accessible-typeahead": "^0.2.1",
     "react-dom": "^16.11.0",
+    "sweetalert2": "^9.3.11",
     "util": "^0.12.1"
   }
 }
