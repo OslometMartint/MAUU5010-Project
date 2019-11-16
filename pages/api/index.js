@@ -13,7 +13,7 @@ async function POST(req, res) {
     // noop
   }
   req.body.legs.map(leg => delete leg.pointsOnLink);
-  data.activeTickets.push(req.body);
+  data.activeTickets.unshift(req.body);
   writeFile(path, JSON.stringify(data), "utf8");
   return res.status(200).end();
 }

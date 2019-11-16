@@ -14,7 +14,7 @@ async function POST(req, res) {
   }
   data.activeTickets = data.activeTickets.filter((a) => {
     if(new Date(a.endTime) < new Date()){
-      data.expiredTickets.push(a);
+      data.expiredTickets.unshift(a);
     }
     return new Date(a.endTime) > new Date();
   });

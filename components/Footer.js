@@ -41,13 +41,15 @@ const Footer = ({router}) => {
       `}</style>
       <nav>
         <Link href="/">
-          <a className={router.pathname === '/' ? 'active' : ''}>
+          <a className={router.pathname === '/' ? 'active' : ''}
+          aria-current={router.pathname === '/'}>
             <i className="material-icons">directions_railway</i>
             Avganger
           </a>
         </Link>
         <Link href="/tickets">
-          <a className={router.pathname === '/tickets' ? 'active' : ''}>
+          <a className={router.pathname === '/tickets' ? 'active' : ''}
+          aria-current={router.pathname === '/tickets'}>
             <i className="material-icons">local_play</i>
             Tickets
           </a>
