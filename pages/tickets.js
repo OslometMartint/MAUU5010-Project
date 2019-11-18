@@ -2,6 +2,8 @@ import Link from "next/link";
 import { activeTickets, expiredTickets } from "../data/tickets";
 import { timeConvert } from "../lib/utils";
 import Countdown from '../components/Countdown';
+import Swal from 'sweetalert2';
+
 
 const Ticket = ({ ticket }) => {
     
@@ -15,6 +17,38 @@ const Ticket = ({ ticket }) => {
         const trainEndTime = new Date(ticket.endTime);
         const currentTime = new Date();
         return trainEndTime < currentTime;
+    }
+
+    function refundTicket(id) {
+        //TODO: make refund function with id-parameter
+    }
+
+    const handleChangeTime = (e) => {
+        
+    }
+
+    const handleRefund = (e) => {
+        Swal.fire({
+            title: '<h2>Are you sure you want to refund this ticket?',
+            text: ticket.legs[0].fromPlace.name + " - " + ticket.legs[ticket.legs.length - 1].toPlace.name + ": " +
+            new Date(ticket.startTime).toLocaleTimeString("nb-NO", {hour: "2-digit", minute: "2-digit"})
+            + " - " +
+            new Date(ticket.endTime).toLocaleTimeString("nb-NO", {hour: "2-digit", minute: "2-digit"}),
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, refund'
+          }).then((result) => {
+            if (result.value) {
+              refundTicket(/*TODO: Need an id for deletion in tickets.json file */);  
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          })
     }
 
     return (
@@ -76,8 +110,8 @@ const Ticket = ({ ticket }) => {
                                 <p>
                                     Remaining time for changes: <Countdown dateAsString={ticket.startTime}/>
                                 </p>
-                                <button>Change date/time</button>
-                                <button>Refund ticket</button>
+                                <button onClick={handleChangeTime}>Change date/time</button>
+                                <button onClick={handleRefund}>Refund ticket</button>
                             </>
                         }
                     </a>
