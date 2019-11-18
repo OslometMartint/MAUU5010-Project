@@ -15,6 +15,10 @@ const Header = () => {
           margin: 0 1.25em;
           text-align: right;
         }
+        button {
+          color: #360000;
+          background-color: #fafafa;
+        }
       `}</style>
       <h1>Norwegian Rail</h1>
     </header>

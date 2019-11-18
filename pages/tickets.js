@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { activeTickets, expiredTickets } from "../data/tickets";
 import { timeConvert } from "../lib/utils";
-import Clock from '../components/Clock';
+import Countdown from '../components/Countdown';
 
 const Ticket = ({ ticket }) => {
+    
     function ticketTrainrideHasStarted(ticket) {
         const trainStartTime = new Date(ticket.startTime);
         const currentTime = new Date();
@@ -71,8 +72,9 @@ const Ticket = ({ ticket }) => {
                         {ticketTrainrideHasStarted(ticket) === false && ticketTrainrideHasEnded(ticket) === false &&
                             <>
                                 <hr />
+                                
                                 <p>
-                                    Remaining time for changes: <Clock />
+                                    Remaining time for changes: <Countdown dateAsString={ticket.startTime}/>
                                 </p>
                                 <button>Change date/time</button>
                                 <button>Refund ticket</button>
