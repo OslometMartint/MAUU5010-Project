@@ -11,7 +11,6 @@ const Countdown = ({dateAsString}) => {
             clearInterval(timerInterval)
         }
     })
-    console.log(date);
     return (<time className="countdown">{'' + date}</time>)
 }
 

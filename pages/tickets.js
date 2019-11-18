@@ -38,7 +38,8 @@ const Ticket = ({ ticket }) => {
 
     //WIP
     const handleChangeTime = (e) => {
-        //console.log(e.target.children);
+        const parentNode = e.target.parentNode;
+        console.log("parent: "+parentNode);
     }
 
     //WIP
