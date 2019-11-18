@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import StationSearchBar from '../components/StationSearchbar';
-import { timeConvert } from '../lib/utils';
-import EnturService, { convertFeatureToLocation } from '@entur/sdk'
+import { timeConvert, fetchDepartures } from '../lib/utils';
 import Swal from 'sweetalert2';
 
 const debounce = (fn, delay) => {
@@ -18,7 +17,7 @@ const Index = () => {
   const [toValue, setToValue] = useState('');
   const [isToValueValid, setToValueValid] = useState(false);
   const [departures, setDepartures] = useState([]);
-  const service = new EnturService({ clientName: 'Oslomet-s331044_MAUU5010_project' })
+  
 
   const postTicket = debounce(contents => {
     fetch(`${location.origin}/api`, {
@@ -52,27 +51,19 @@ const Index = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (isFromValueValid && isToValueValid) {
-      fetchDepartures();
+      updateDepartures();
+      console.log(departures);
     }
   }
 
-
-  async function fetchDepartures() {
-    const [fromFeature] = await service.getFeatures(fromValue)
-    const [toFeature] = await service.getFeatures(toValue)
-
-    if (!fromFeature || !toFeature) {
-      return
-    }
-
-    const tripPatterns = await service.getTripPatterns({
-      searchDate: new Date(),
-      from: convertFeatureToLocation(fromFeature),
-      to: convertFeatureToLocation(toFeature),
-    })
-
-    setDepartures(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')));
-    console.log(tripPatterns.filter(obj => obj.legs.every(leg => leg.mode === 'rail')))
+  async function updateDepartures() {
+    fetchDepartures(fromValue, toValue).then((results, err) => {
+      if (err) {
+        console.error(err)
+      }
+      setDepartures(results.filter(obj => obj.legs.every(leg => leg.mode === 'rail')));
+      }
+    );
   }
 
   return (

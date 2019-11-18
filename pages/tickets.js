@@ -4,7 +4,6 @@ import { timeConvert } from "../lib/utils";
 import Countdown from '../components/Countdown';
 import Swal from 'sweetalert2';
 
-
 const Ticket = ({ ticket }) => {
     
     function ticketTrainrideHasStarted(ticket) {
@@ -19,14 +18,30 @@ const Ticket = ({ ticket }) => {
         return trainEndTime < currentTime;
     }
 
-    function refundTicket(id) {
-        //TODO: make refund function with id-parameter
+    //WIP
+    async function findTicketTrainTimeAlternatives(from, to, currentStartTime) {
+        fetchDepartures(from, to).then((results, err) => {
+            if (err) {
+              console.error(err)
+            }
+            console.log(results);
+            const trainTimeAlterantives = results.filter(obj => obj.startTime === currentStartTime);
+            console.log(trainTimeAlterantives);
+            }
+          );
     }
 
-    const handleChangeTime = (e) => {
+    //WIP
+    function refundTicket(id) {
         
     }
 
+    //WIP
+    const handleChangeTime = (e) => {
+        //console.log(e.target.children);
+    }
+
+    //WIP
     const handleRefund = (e) => {
         Swal.fire({
             title: '<h2>Are you sure you want to refund this ticket?',
