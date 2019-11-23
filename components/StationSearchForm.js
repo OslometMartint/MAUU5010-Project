@@ -99,6 +99,7 @@ const StationSearchForm = ({
             background-color: #360000;
             color: white;
             cursor: pointer;
+            margin-top: 0.5em;
         }
         button:focus {
             background-color: white;

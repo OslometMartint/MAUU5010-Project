@@ -74,8 +74,16 @@ const Index = () => {
         ul {
           list-style: none;
           padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          width: 70%;
+          justify-content: space-evenly;
         }
-
+        @media screen and (max-width: 600px) {
+          ul {
+            width: 100%;
+          }
+        }
         li {
           border: 2px solid #360000;
           width: 330px;
