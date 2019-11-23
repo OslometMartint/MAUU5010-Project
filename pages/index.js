@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Head from 'next/Head';
+import Head from 'next/head';
 import StationSearchForm from "../components/StationSearchForm";
 import { timeConvert, expireTickets, debounce } from "../lib/utils";
 

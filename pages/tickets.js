@@ -1,5 +1,5 @@
 import { activeTickets, expiredTickets } from "../data/tickets";
-import Head from 'next/Head';
+import Head from 'next/head';
 import { timeConvert, debounce } from "../lib/utils";
 import Countdown from "../components/Countdown";
 import Control from "../components/Control";
