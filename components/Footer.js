@@ -38,6 +38,9 @@ const Footer = ({router}) => {
           color: #360000;
           outline: 0;
         }
+        a:focus {
+          outline: 4px solid;
+        }
       `}</style>
       <nav>
         <Link href="/">

@@ -28,6 +28,7 @@
     "react-accessible-typeahead": "^0.2.1",
     "react-dom": "^16.11.0",
     "sweetalert2": "^9.3.11",
+    "use-state-with-callback": "^1.0.18",
     "util": "^0.12.1"
   }
 }

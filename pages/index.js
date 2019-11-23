@@ -33,15 +33,16 @@ const Index = () => {
 
   const buyTicket = data => {
     postTicket(data);
-    Swal.fire(
-      "Congratulations!",
-      `You have bought a ticket from ${fromValue} to ${toValue}!`,
-      "success"
-    );
+    Swal.fire({
+      title: "Congratulations!",
+      text: `You have bought a ticket from ${fromValue} to ${toValue}!`,
+      icon: "success",
+      buttonsStyling: false
+    });
   };
 
   return (
-    <div>
+    <>
       <StationSearchForm 
         setFromValue={setFromValue} 
         fromValue={fromValue}
@@ -50,7 +51,7 @@ const Index = () => {
         setDepartures={setDepartures}
       />
       {departures.length > 0 && (
-        <>
+        <div className="departures">
           <h2>Departures</h2>
           <ul role="list">
             {departures.map((departure, idx) => (
@@ -65,11 +66,18 @@ const Index = () => {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
       <style jsx>{`
+      .departures {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
         ul {
           list-style: none;
+          padding: 0;
         }
 
         li {
@@ -93,8 +101,22 @@ const Index = () => {
           margin-top: 0;
           float: right;
         }
+        .departures button {
+          display: block;
+          width: 100%;
+          height: 45px;
+          background-color: #360000;
+          color: white;
+          font-size: 1em;
+        }
+        .departures button:focus {
+          background-color: white;
+          color: #360000;
+          -webkit-appearance: none;
+          outline: 4px solid;
+        }
       `}</style>
-    </div>
+    </>
   );
 };
 
