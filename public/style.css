@@ -34,6 +34,10 @@ html,
 .swal2-icon.swal2-success .swal2-success-ring {
   border: 0.25em solid #360000!important;
 }
+.swal2-icon.swal2-warning {
+  color: #360000!important;
+  border-color: #360000!important;
+}
 .swal2-title, #swal2-content {
   color: #360000!important;
 }
@@ -49,9 +53,10 @@ html,
   color: white;
   font-size: 1em;
 }
-.swal2-confirm:focus {
-  background-color: white;
-  color: #360000;
-  -webkit-appearance: none;
-  outline: 4px solid;
+.swal2-confirm:focus,
+.swal2-cancel:focus {
+  background-color: white!important;
+  color: #360000!important;
+  -webkit-appearance: none!important;
+  outline: 4px solid!important;
 }
