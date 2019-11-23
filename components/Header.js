@@ -1,3 +1,4 @@
+import Link from 'next/link';
 const Header = () => {
   return (
     <header>
@@ -9,18 +10,22 @@ const Header = () => {
           display: flex;
           align-items: center;
         }
-        h1 {
+        h1, a {
           color: #fafafa;
           font-size: 1em;
           margin: 0 1.25em;
           text-align: right;
+          text-decoration: none;
         }
         button {
           color: #360000;
           background-color: #fafafa;
         }
       `}</style>
-      <h1>Norwegian Rail</h1>
+      <h1><Link href="/"><a>
+      Norwegian Rail
+      </a>
+      </Link></h1>
     </header>
   );
 };

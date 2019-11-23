@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { activeTickets, expiredTickets } from "../data/tickets";
 import { timeConvert } from "../lib/utils";
 import Countdown from "../components/Countdown";
