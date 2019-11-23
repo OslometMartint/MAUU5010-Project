@@ -44,7 +44,7 @@ const Footer = ({router}) => {
           <a className={router.pathname === '/' ? 'active' : ''}
           aria-current={router.pathname === '/'}>
             <i className="material-icons">directions_railway</i>
-            Avganger
+            Departures
           </a>
         </Link>
         <Link href="/tickets">

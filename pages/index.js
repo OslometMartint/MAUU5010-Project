@@ -12,38 +12,28 @@ const debounce = (fn, delay) => {
 };
 
 const Index = () => {
-  const [fromValue, setFromValue] = useState('');
-  const [isFromValueValid, setFromValueValid] = useState(false);
-  const [toValue, setToValue] = useState('');
-  const [isToValueValid, setToValueValid] = useState(false);
+  const [fromValue, setFromValue] = useState("");
+  const [toValue, setToValue] = useState("");
   const [departures, setDepartures] = useState([]);
   
 
   const postTicket = debounce(contents => {
     fetch(`${location.origin}/api`, {
-      method: 'post',
-      credentials: 'same-origin',
+      method: "post",
+      credentials: "same-origin",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json"
       },
-      body: JSON.stringify(contents),
+      body: JSON.stringify(contents)
     });
   }, 200);
 
-  if (process.browser) {
-    fetch(`${location.origin}/api/expiretickets`, {
-      method: 'post',
-      credentials: 'same-origin',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({}),
-    });
-  }
+  expireTickets();
 
-  const buyTicket = (data) => {
+  const buyTicket = data => {
     postTicket(data);
-    Swal.fire('Congratulations!',
+    Swal.fire(
+      "Congratulations!",
       `You have bought a ticket from ${fromValue} to ${toValue}!`,
       'success')
   }
@@ -131,7 +121,7 @@ const Index = () => {
       }
     `}</style>
     </div>
-  )
+  );
 };
 
 export default Index;

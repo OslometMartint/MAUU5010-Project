@@ -10,7 +10,7 @@ async function POST(req, res) {
   try {
     data = JSON.parse(await readFile(path, "utf8"));
   } catch (e) {
-    // noop
+    console.error(e);
   }
   req.body.legs.map(leg => delete leg.pointsOnLink);
   data.activeTickets.unshift(req.body);
