@@ -2,6 +2,7 @@ import { activeTickets, expiredTickets } from "../data/tickets";
 import Head from 'next/Head';
 import { timeConvert, debounce } from "../lib/utils";
 import Countdown from "../components/Countdown";
+import Control from "../components/Control";
 import Swal from "sweetalert2";
 
 const Ticket = ({ ticket }) => {
@@ -48,8 +49,7 @@ const refundTicket = debounce(ticket => {
 
   //WIP
   const handleChangeTime = e => {
-    const parentNode = e.target.parentNode;
-    console.log("parent: " + parentNode);
+    Swal.fire('Work in progress');
   };
 
   //WIP
@@ -137,8 +137,7 @@ const refundTicket = debounce(ticket => {
         </p>
         <small>{timeConvert(ticket.duration)}</small>
         <small className="price">{Math.round(ticket.duration / 120)} NOK</small>
-        {ticketTrainrideHasStarted(ticket) === false &&
-          ticketTrainrideHasEnded(ticket) === false && (
+        {!ticketTrainrideHasStarted(ticket) &&!ticketTrainrideHasEnded(ticket) && (
             <>
               <hr />
 
@@ -150,6 +149,7 @@ const refundTicket = debounce(ticket => {
               <button onClick={handleRefund}>Refund ticket</button>
             </>
           )}
+            {ticketTrainrideHasStarted(ticket) && !ticketTrainrideHasEnded(ticket) && <Control id={ticket.id}/>}
       </li>
     </>
   );

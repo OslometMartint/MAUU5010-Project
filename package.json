@@ -25,6 +25,7 @@
     "next": "^9.1.3",
     "next-offline": "^4.0.6",
     "nprogress": "^0.2.0",
+    "qrcode": "^1.4.4",
     "react": "^16.11.0",
     "react-accessible-typeahead": "^0.2.1",
     "react-dom": "^16.11.0",
