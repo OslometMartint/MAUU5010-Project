@@ -56,7 +56,8 @@ const Index = () => {
                   {departure.endTime.slice(11, 16)}
                 </h3>
                 {timeConvert(departure.duration)}
-                Price: {Math.round(departure.duration / 120)},-
+                <span>Price: {Math.round(departure.duration / 120)} NOK</span>
+                <hr />
                 <button onClick={() => buyTicket(departure)}>Buy ticket</button>
               </li>
             ))}
@@ -93,8 +94,11 @@ const Index = () => {
           outline: 0;
         }
         h3 {
+          text-align: center;
           margin-top: 0;
-          float: right;
+        }
+        span {
+          float:right;
         }
         .departures button {
           display: block;
