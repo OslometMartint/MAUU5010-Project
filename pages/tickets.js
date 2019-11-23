@@ -1,5 +1,6 @@
 import { activeTickets, expiredTickets } from "../data/tickets";
-import { timeConvert } from "../lib/utils";
+import Head from 'next/Head';
+import { timeConvert, debounce } from "../lib/utils";
 import Countdown from "../components/Countdown";
 import Swal from "sweetalert2";
 
@@ -31,7 +32,19 @@ const Ticket = ({ ticket }) => {
   }
 
   //WIP
-  function refundTicket(id) {}
+
+const refundTicket = debounce(ticket => {
+    console.log(ticket);
+    fetch(`${location.origin}/api/delete`, {
+        method: "delete",
+        credentials: "same-origin",
+        headers: {
+        "content-type": "application/json"
+        },
+        body: JSON.stringify(ticket)
+    });
+    }, 200);
+  
 
   //WIP
   const handleChangeTime = e => {
@@ -64,7 +77,7 @@ const Ticket = ({ ticket }) => {
       confirmButtonText: "Yes, refund"
     }).then(result => {
       if (result.value) {
-        refundTicket(/*TODO: Need an id for deletion in tickets.json file */);
+        refundTicket(ticket);
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
       }
     });
@@ -72,6 +85,7 @@ const Ticket = ({ ticket }) => {
 
   return (
     <>
+    <Head><title>Tickets - Norwegian Rail</title></Head>
       <style jsx>{`
         li {
           border: 2px solid #360000;

@@ -1,16 +1,10 @@
 import { useState } from "react";
+import Head from 'next/Head';
 import StationSearchForm from "../components/StationSearchForm";
-import { timeConvert, expireTickets } from "../lib/utils";
+import { timeConvert, expireTickets, debounce } from "../lib/utils";
 
 import Swal from "sweetalert2";
 
-const debounce = (fn, delay) => {
-  let timer = null;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay);
-  };
-};
 
 const Index = () => {
   const [fromValue, setFromValue] = useState("");
@@ -43,6 +37,7 @@ const Index = () => {
 
   return (
     <>
+      <Head><title>Norwegian Rail</title></Head>
       <StationSearchForm 
         setFromValue={setFromValue} 
         fromValue={fromValue}
