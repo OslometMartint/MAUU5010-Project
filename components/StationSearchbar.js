@@ -20,13 +20,19 @@ function StationSearchBar({ id, setValue, value, valid }) {
   };
   const handleOnKeyDown = e => {
     const eventSuggestions = document.querySelectorAll(`#${id}~.has-suggestions li`);
+    if(e.key === 'Escape') {
+        setSuggestions([]);
+        setSearchInput('');
+        setActiveSuggestion(-1);
+        document.getElementById(id).focus();
+    }
     if(e.target.tagName === 'LI' && (e.key === 'Enter' || e.key === ' ')) {
         handleSuggestionOnClick(e);
     }
-    if (e.key === "ArrowDown" && suggestions.length > 0) {
+    if (e.key === 'ArrowDown' && suggestions.length > 0) {
       setNextSuggestion(eventSuggestions);
     }
-    if (e.key === "ArrowUp" && suggestions.length > 0) {
+    if (e.key === 'ArrowUp' && suggestions.length > 0) {
       setPreviousSuggestion(eventSuggestions);
     }
   };
@@ -117,6 +123,7 @@ function StationSearchBar({ id, setValue, value, valid }) {
           background-color: white;
           margin-top: 0;
           width: 100%;
+          z-index: 10;
         }
         .has-suggestions {
           border: 2px solid;
